@@ -1,0 +1,144 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column; /* Ensures children elements stack vertically */
+    align-items: center; /* Centers children horizontally */
+    background: linear-gradient(135deg, #ffcc00, #ff5722, #03a9f4, #e91e63);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    color: #eee;
+    margin: 0 5px;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    padding: 20px;
+    background: rgba(34, 34, 34, 0.85);
+    box-shadow: 0 0 45px rgba(28, 171, 102, 0);
+    border-radius: 10px;
+    animation: containerFadeIn 2s ease-in-out;
+}
+
+@keyframes containerFadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+header {
+    text-align: center;
+    padding: 20px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    background: #100d73;
+    margin: 0 auto 20px;
+    border-radius: 5px;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    display: inline-block;
+}
+
+nav ul li a:hover {
+    background: #444;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+    color: #ffcc00;
+}
+
+main {
+    margin: 20px 0;
+    animation: mainSlideIn 1.5s ease-out;
+}
+
+@keyframes mainSlideIn {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.cover-letter p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #ddd;
+    margin-bottom: 1em;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.footer-slider {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.footer-image {
+    position: absolute;
+    width: 600px;
+    height: 100px;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+.footer-image.active {
+    opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+    
+    nav ul {
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    nav ul li a {
+        padding: 8px 15px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    .cover-letter p {
+        font-size: 1em;
+    }
+}
