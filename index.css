@@ -39,6 +39,9 @@ header h1 {
     background: url(image/Untitled-1.jpg);
     width: -webkit-fill-available;
     height: 185px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 header p {
@@ -54,7 +57,7 @@ nav ul {
     margin: 15px auto;
     display: flex;
     justify-content: space-around;
-    align-items: center; 
+    align-items: center;
     background-color: rgb(47, 0, 255);
     flex-wrap: wrap;
     text-align: center;
@@ -131,7 +134,20 @@ footer {
     color: white;
     margin-top: 20px;
     max-width: 1180px;
-    height: 100px;
+    height: auto;
+}
+
+.footer-images {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    background-repeat: no-repeat;
+}
+
+.footer-images a img {
+    max-width: 100%;
+    height: auto;
 }
 
 .animated-button {
@@ -148,22 +164,6 @@ footer {
 .animated-button:hover {
     background-color: #0056b3;
     transform: scale(1.05);
-}
-
-.footer-image {
-    width: 100%;
-    max-width: 1200px;
-    height: 100px;
-}
-
-footer a {
-    color: #f4f4f4;
-    text-decoration: none;
-    background: url(image/crop.jpg);
-}
-
-footer a:hover {
-    text-decoration: underline;
 }
 
 /* Responsive styles */
