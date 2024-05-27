@@ -171,6 +171,7 @@ footer a:hover {
 @media (max-width: 768px) {
     .background-image {
         background-position: center;
+        background-size: contain;
     }
     nav ul {
         flex-direction: column;
@@ -193,8 +194,9 @@ footer a:hover {
 }
 
 @media (max-width: 480px) {
-    .background-image {
+   .background-image {
         background-position: center;
+        background-size: contain;
     }
     nav ul {
         flex-direction: column;
