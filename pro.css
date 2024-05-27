@@ -84,7 +84,7 @@ main {
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     animation: mainSlideIn 2s ease-in-out;
-    margin-left: 18px;
+    margin: 18px;
 }
 
 @keyframes mainSlideIn {
@@ -130,6 +130,11 @@ section ul li {
     nav ul li {
         margin: 5px 0;
     }
+    
+    main {
+        text-align: center;
+    }
+    
 }
 
 @media (max-width: 480px) {
@@ -147,5 +152,9 @@ section ul li {
 
     nav ul li {
         margin: 5px 0;
+    }
+
+    main {
+        text-align: center;
     }
 }
