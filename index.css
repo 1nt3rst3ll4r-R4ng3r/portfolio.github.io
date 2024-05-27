@@ -51,9 +51,15 @@ header p {
 nav ul {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 15px auto;
     display: flex;
     justify-content: space-around;
+    align-items: center; 
+    background-color: rgb(47, 0, 255);
+    flex-wrap: wrap;
+    text-align: center;
+    border-radius: 5px;
+    height: 37px;
 }
 
 nav ul li {
@@ -62,14 +68,16 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #333;
+    color: #ffffff;
     padding: 10px 20px;
-    transition: background 0.3s ease, color 0.3s ease;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    border-radius: 10px;
 }
 
 nav ul li a:hover {
-    background: #333;
+    background: #011364;
     color: #fff;
+    transform: scale(1.1); /* Zoom in effect */
 }
 
 nav.sticky {
@@ -171,10 +179,12 @@ footer a:hover {
 @media (max-width: 768px) {
     .background-image {
         background-position: center;
-        background-size: contain;
+        background-size: 100% 100%;
     }
     nav ul {
         flex-direction: column;
+        align-items: center; /* Ensure items are centered horizontally */
+        height: auto; /* Adjust height to fit content */
     }
     nav ul li {
         display: block;
@@ -193,13 +203,45 @@ footer a:hover {
     }
 }
 
-@media (max-width: 480px) {
-   .background-image {
+@media (max-width: 600px) {
+    .background-image {
         background-position: center;
-        background-size: contain;
+        background-size: 100% 100%;
+    }
+    .container {
+        padding: 10px;
+    }
+    .cve-link a {
+        margin: 2px 60px;
     }
     nav ul {
         flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+    nav ul li {
+        display: block;
+        text-align: center;
+        margin: 6px;
+    }
+    .rss-feed iframe {
+        height: 300px;
+    }
+    footer {
+        max-width: 100%;
+        padding: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .background-image {
+        background-position: center;
+        background-size: 100% 100%;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
     }
     nav ul li {
         display: block;
